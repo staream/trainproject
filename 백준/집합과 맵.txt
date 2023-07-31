@@ -1,0 +1,29 @@
+#10815 숫자카드
+# dict의 인덱스는 순서가 아닌 keyword로 하는 것이다.
+# "안에 존재하니?"가 궁금하다면 in을 사용해라.
+
+import sys
+a= int(sys.stdin.readline())
+b=list(map(int, sys.stdin.readline().split()))
+c=int(sys.stdin.readline())
+d= list(map(int, sys.stdin.readline().split()))
+dict_b={b[i]:1 for i in range(a)}
+
+for j in range(c):
+    if d[j] in dict_b:
+        print(1, end=" ")
+    else:
+        print(0,end=" ")
+
+
+
+import sys
+input= sys.stdin.readline          #######() 괄호시치
+a, b=map(int,input().split())      ########### \n 이 안나옴
+dic_b= {input():1 for i in range(a)}
+result=0
+for j in range(b):
+    d= input()                       #.strip("\n")
+    if  d in dic_b:
+        result+=1
+print(result)

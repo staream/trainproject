@@ -1,0 +1,24 @@
+def func(a,*c,**d):
+
+func(1,2,3,5,56,6,c=4,d=6,)
+print(a) > 1
+print(c) > (2,3,5,56,6)
+print(d) > {'c':4,'d':6}
+func(1,2,3,5,56,6,c=4,d=6,a=5)#Error
+# 이유는 a가 keyword로 있기 때문이다.
+
+scope
+<class>랑 같이 봐야 할 듯
+def에서 변수가 없다면 밖에 있는 변수를 찾는다.
+만약 밖에가 없다면 def에서는 변수를 할당해야 한다.
+
+lambda [parameter] : [return value]
+lambda x : x^x
+
+
+실습시 조건을 넣는 법
+def math(func, num):
+    if type(num) != int:
+        return None
+    result = func(num)
+    return result

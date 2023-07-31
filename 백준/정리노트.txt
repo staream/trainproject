@@ -1,0 +1,50 @@
+약수와 배수
+#11653 소인수분해
+조건문에서 and or 문제
+위와 아래의 차이에서 알 수 있는 것
+if 내에 and와 같은 것은 오류가 생길 수 있다는 문제이다.
+아래에선 분명 False가 나오는데 True로 판단하는 오류가 발생
+하는 경우가 있다. 
+
+
+L=[]
+######### L==False 는 False로 나옴 , L==True도 False임
+########### not (L) 이 True로 나옴
+
+
+
+input vs sys
+"""
+import sys
+sys.stdin.readline()
+"""
+은 input과 비슷하지만 다르다
+차이: sys는 개행문자를 포함한채로 return하지만
+input()은 삭제하는 과정을 거치고 진행한다.
+
+import sys
+a= sys.stdin.readline()# "~\n"의 형태이다.
+print(a)
+
+이런 형태면 가능하다. 
+cards = list(map(int, sys.stdin.readline().split()))
+
+
+
+
+list.append()
+append는 새로운 리스트를 만들면서 공간을 차지하게 된다.
+그래서 해결안은 기존의 list를 최대한 이용하며 하는 것이다.
+
+sort는 list 안의 list에 대해 알아볼 수 있다.
+list의 처음이 구분의 기준 
+다음은 list의 다음 부분이 구분의 기준이다.
+
+
+------------------정렬에서 나온 개념-------------
+len_cha=[[],[],[]]          vs         [[]]*10
+특이한 사항이 나올 때는 
+
+append() 에서 발생함. 
+1.처음의 경우에는 인덱스를 한다면 하나에만 나타난다.
+2. 두번째에는 인덱스를 해도 모든 안의 list에 append가 된다.
